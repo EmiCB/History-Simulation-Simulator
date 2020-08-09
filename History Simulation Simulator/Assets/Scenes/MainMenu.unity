@@ -183,7 +183,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &124605609
 MonoBehaviour:
@@ -210,11 +210,12 @@ MonoBehaviour:
   disconnectInactiveConnections: 0
   disconnectInactiveTimeout: 60
   authenticator: {fileID: 0}
-  playerPrefab: {fileID: 5389481526012172902, guid: 07264f82194c6e54ab654f5630989534,
+  playerPrefab: {fileID: 1704725842188160331, guid: 98cde86f649b55948b79f62b3a59ccae,
     type: 3}
   autoCreatePlayer: 1
   playerSpawnMethod: 0
   spawnPrefabs: []
+  minPlayers: 1
   menuScene: Assets/Scenes/MainMenu.unity
   roomPlayerPrefab: {fileID: 5389481526012172901, guid: 07264f82194c6e54ab654f5630989534,
     type: 3}
@@ -343,7 +344,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &380551441
 GameObject:
