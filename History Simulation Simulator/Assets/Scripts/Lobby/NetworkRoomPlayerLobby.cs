@@ -104,7 +104,7 @@ namespace EmiCB.Lobby {
         [Command]
         public void CmdStartGame() {
             if (Room.roomPlayers[0].connectionToClient != connectionToClient) return;
-            // TODO: start game
+            Room.StartGame();
         }
     }
 }

@@ -10,9 +10,13 @@ namespace EmiCB.Lobby {
         [SerializeField] private int minPlayers = 1;
 
         [Scene] [SerializeField] private string menuScene = string.Empty;
+        [Scene] [SerializeField] private string gameScene = string.Empty;
 
         [Header("Room")]
         [SerializeField] private NetworkRoomPlayerLobby roomPlayerPrefab = null;
+
+        [Header("Game")]
+        [SerializeField] private NetworkGamePlayerLobby gamePlayerPrefab = null;
 
         // custom events
         public static event Action OnClientConnected;
@@ -20,6 +24,7 @@ namespace EmiCB.Lobby {
 
         // list of waiting players
         public List<NetworkRoomPlayerLobby> roomPlayers {get;} = new List<NetworkRoomPlayerLobby>();
+        public List<NetworkGamePlayerLobby> gamePlayers {get;} = new List<NetworkGamePlayerLobby>();
 
         // load gameobjects from Resources/SpawnablePrefabs folder (Server)
         public override void OnStartServer() => spawnPrefabs = Resources.LoadAll<GameObject>("SpawnablePrefabs").ToList();
@@ -103,6 +108,31 @@ namespace EmiCB.Lobby {
             }
 
             return true;
+        }
+
+
+        public void StartGame() {
+            if (SceneManager.GetActiveScene().path == menuScene) {
+                if (!IsReadyToStart()) return;
+
+                ServerChangeScene("Simulation");
+            }
+        }
+
+        public override void ServerChangeScene(string newSceneName) {
+            // menu to game
+            if (SceneManager.GetActiveScene().path == menuScene && newSceneName.Equals(gameScene)) {
+                for (int i = roomPlayers.Count - 1; i  >= 0; i--) {
+                    var conn = roomPlayers[i].connectionToClient;
+                    var gamePlayerInstance = Instantiate(gamePlayerPrefab);
+                    gamePlayerInstance.SetDisplayName(roomPlayers[i].displayName);
+
+                    NetworkServer.Destroy(conn.identity.gameObject);
+                    NetworkServer.ReplacePlayerForConnection(conn, gamePlayerInstance.gameObject, true);
+                }
+            }
+
+            base.ServerChangeScene(newSceneName);
         }
     }
 }
