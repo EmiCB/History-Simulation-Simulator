@@ -6,5 +6,7 @@ using UnityEngine;
 public class CharacterData : ScriptableObject {
     public string characterName;
     public string title;
+    public string faction;
+    [TextArea] public string factionDescription;
     [TextArea] public string biography;
 }

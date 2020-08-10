@@ -10,6 +10,7 @@ ScriptsOnlyBuild:
     - EmiCB.Lobby.PlayerSpawnPoint
     - EmiCB.Lobby.PlayerSpawnSystem
     - EmiCB.PlayerCameraController
+    - LevelData
     - PlayerDataController
     - PlayerMovementController
     - PlayerUIController
@@ -62,6 +63,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.LayoutElement
     - UnityEngine.UI.RectMask2D
+    - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
     Assets/Scenes/MainMenu.unity:
     - Class: 1
@@ -101,65 +103,69 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12282}
     - Class: 114
-      Script: {instanceID: 12466}
+      Script: {instanceID: 12468}
     - Class: 114
-      Script: {instanceID: 12634}
+      Script: {instanceID: 12636}
     - Class: 114
-      Script: {instanceID: 12882}
+      Script: {instanceID: 12884}
     - Class: 114
-      Script: {instanceID: 13030}
+      Script: {instanceID: 13032}
     - Class: 114
-      Script: {instanceID: 13036}
+      Script: {instanceID: 13038}
     - Class: 114
-      Script: {instanceID: 13080}
+      Script: {instanceID: 13082}
     - Class: 114
-      Script: {instanceID: 13166}
+      Script: {instanceID: 13168}
     - Class: 114
-      Script: {instanceID: 13194}
+      Script: {instanceID: 13196}
     - Class: 114
-      Script: {instanceID: 13530}
+      Script: {instanceID: 13532}
     - Class: 114
-      Script: {instanceID: 13722}
+      Script: {instanceID: 13572}
     - Class: 114
-      Script: {instanceID: 13948}
+      Script: {instanceID: 13726}
     - Class: 114
       Script: {instanceID: 13954}
     - Class: 114
-      Script: {instanceID: 13996}
+      Script: {instanceID: 13960}
     - Class: 114
-      Script: {instanceID: 14164}
+      Script: {instanceID: 14002}
     - Class: 114
-      Script: {instanceID: 14192}
+      Script: {instanceID: 14150}
     - Class: 114
-      Script: {instanceID: 14374}
+      Script: {instanceID: 14170}
     - Class: 114
-      Script: {instanceID: 14396}
+      Script: {instanceID: 14200}
     - Class: 114
-      Script: {instanceID: 14402}
+      Script: {instanceID: 14382}
     - Class: 114
-      Script: {instanceID: 14492}
+      Script: {instanceID: 14404}
     - Class: 114
-      Script: {instanceID: 14674}
+      Script: {instanceID: 14410}
     - Class: 114
-      Script: {instanceID: 14722}
+      Script: {instanceID: 14500}
     - Class: 114
-      Script: {instanceID: 14796}
+      Script: {instanceID: 14682}
     - Class: 114
-      Script: {instanceID: 14914}
+      Script: {instanceID: 14730}
     - Class: 114
-      Script: {instanceID: 15010}
+      Script: {instanceID: 14804}
     - Class: 114
-      Script: {instanceID: 15242}
+      Script: {instanceID: 14922}
     - Class: 114
-      Script: {instanceID: 15296}
+      Script: {instanceID: 15018}
     - Class: 114
-      Script: {instanceID: 15378}
+      Script: {instanceID: 15252}
     - Class: 114
-      Script: {instanceID: 15520}
+      Script: {instanceID: 15306}
     - Class: 114
-      Script: {instanceID: 15596}
+      Script: {instanceID: 15388}
     - Class: 114
-      Script: {instanceID: 15614}
+      Script: {instanceID: 15530}
+    - Class: 114
+      Script: {instanceID: 15606}
+    - Class: 114
+      Script: {instanceID: 15624}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -210,47 +216,47 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12238}
     - Class: 114
-      Script: {instanceID: 12882}
+      Script: {instanceID: 12884}
     - Class: 114
-      Script: {instanceID: 13030}
+      Script: {instanceID: 13032}
     - Class: 114
-      Script: {instanceID: 13036}
+      Script: {instanceID: 13038}
     - Class: 114
-      Script: {instanceID: 13530}
+      Script: {instanceID: 13532}
     - Class: 114
-      Script: {instanceID: 13722}
+      Script: {instanceID: 13726}
     - Class: 114
-      Script: {instanceID: 13870}
+      Script: {instanceID: 13876}
     - Class: 114
-      Script: {instanceID: 13948}
+      Script: {instanceID: 13954}
     - Class: 114
-      Script: {instanceID: 13996}
+      Script: {instanceID: 14002}
     - Class: 114
-      Script: {instanceID: 14164}
+      Script: {instanceID: 14170}
     - Class: 114
-      Script: {instanceID: 14192}
+      Script: {instanceID: 14200}
     - Class: 114
-      Script: {instanceID: 14374}
+      Script: {instanceID: 14382}
     - Class: 114
-      Script: {instanceID: 14492}
+      Script: {instanceID: 14500}
     - Class: 114
-      Script: {instanceID: 14674}
+      Script: {instanceID: 14682}
     - Class: 114
-      Script: {instanceID: 14722}
+      Script: {instanceID: 14730}
     - Class: 114
-      Script: {instanceID: 14796}
+      Script: {instanceID: 14804}
     - Class: 114
-      Script: {instanceID: 14914}
+      Script: {instanceID: 14922}
     - Class: 114
-      Script: {instanceID: 15010}
+      Script: {instanceID: 15018}
     - Class: 114
-      Script: {instanceID: 15296}
+      Script: {instanceID: 15306}
     - Class: 114
-      Script: {instanceID: 15378}
+      Script: {instanceID: 15388}
     - Class: 114
-      Script: {instanceID: 15560}
+      Script: {instanceID: 15570}
     - Class: 114
-      Script: {instanceID: 15596}
+      Script: {instanceID: 15606}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -526,6 +532,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineStoryboard
+  - hash:
+      serializedVersion: 2
+      Hash: bf1bf714b8c0edef1be0672f86cc8053
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LevelSelectionButton
   - hash:
       serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
@@ -816,7 +828,7 @@ ScriptsOnlyBuild:
     className: Tank
   - hash:
       serializedVersion: 2
-      Hash: bdfa84ba76a76c1caa29069b5e535b2e
+      Hash: b5a7d67981c2619058b0c616e95aa89c
     assemblyName: Assembly-CSharp.dll
     namespaceName: EmiCB.Lobby
     className: MainMenu
@@ -900,6 +912,12 @@ ScriptsOnlyBuild:
     className: CinemachineComposer
   - hash:
       serializedVersion: 2
+      Hash: b096bae97d345c6efd1824531963be62
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LevelData
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.Analytics.Editor.dll
     namespaceName: UnityEditor.Analytics
@@ -952,6 +970,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachinePipeline
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SimulationDataController
   - hash:
       serializedVersion: 2
       Hash: e87f50864f8a979f1228e8c69bd62658
@@ -1320,7 +1344,7 @@ ScriptsOnlyBuild:
     className: CinemachineIndependentImpulseListener
   - hash:
       serializedVersion: 2
-      Hash: 36d8493ccf59b6a20bf289f230064cfe
+      Hash: 0212beab4b17f7ad2b1345b12d00b09a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CharacterData
@@ -1462,6 +1486,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.MultipleAdditiveScenes
     className: PhysicsSimulator
+  - hash:
+      serializedVersion: 2
+      Hash: 61630261af1604ae78a097877d7e6abd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LevelSelectionButtonGenerator
   - hash:
       serializedVersion: 2
       Hash: 681b5f9be6f57e5a7b20908e503986d3

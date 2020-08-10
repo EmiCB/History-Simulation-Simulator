@@ -7,11 +7,13 @@ namespace EmiCB.Lobby {
         [SerializeField] private NetworkManagerLobby networkManager = null;
 
         [Header("UI")]
-        [SerializeField] private GameObject landingPagePanel = null;
+        [SerializeField] private GameObject mainButtons = null;
+        [SerializeField] private GameObject hostingPanel = null;
 
         public void HostLobby() {
             networkManager.StartHost();
-            landingPagePanel.SetActive(false);
+            mainButtons.SetActive(false);
+            hostingPanel.SetActive(false);
         }
     }
 }
