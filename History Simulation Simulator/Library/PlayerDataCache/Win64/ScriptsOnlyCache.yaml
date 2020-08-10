@@ -7,6 +7,8 @@ ScriptsOnlyBuild:
     - EmiCB.Lobby.NetworkManagerLobby
     - EmiCB.Lobby.NetworkRoomPlayerLobby
     - EmiCB.Lobby.PlayerNameInput
+    - EmiCB.Lobby.PlayerSpawnPoint
+    - EmiCB.Lobby.PlayerSpawnSystem
     - EmiCB.PlayerCameraController
     - PlayerDataController
     - PlayerMovementController
@@ -22,8 +24,6 @@ ScriptsOnlyBuild:
     - Mirror.NetworkTransform
     Mirror.dll:
     - Mirror.NetworkIdentity
-    - Mirror.NetworkManager
-    - Mirror.NetworkManagerHUD
     - Mirror.TelepathyTransport
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
@@ -72,7 +72,13 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
@@ -103,13 +109,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13030}
     - Class: 114
+      Script: {instanceID: 13036}
+    - Class: 114
       Script: {instanceID: 13080}
     - Class: 114
       Script: {instanceID: 13166}
     - Class: 114
       Script: {instanceID: 13194}
     - Class: 114
+      Script: {instanceID: 13530}
+    - Class: 114
+      Script: {instanceID: 13722}
+    - Class: 114
+      Script: {instanceID: 13946}
+    - Class: 114
       Script: {instanceID: 13952}
+    - Class: 114
+      Script: {instanceID: 14160}
     - Class: 114
       Script: {instanceID: 14188}
     - Class: 114
@@ -118,6 +134,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14392}
     - Class: 114
       Script: {instanceID: 14398}
+    - Class: 114
+      Script: {instanceID: 14488}
+    - Class: 114
+      Script: {instanceID: 14670}
     - Class: 114
       Script: {instanceID: 14718}
     - Class: 114
@@ -129,12 +149,22 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15238}
     - Class: 114
+      Script: {instanceID: 15292}
+    - Class: 114
+      Script: {instanceID: 15374}
+    - Class: 114
       Script: {instanceID: 15516}
     - Class: 114
-      Script: {instanceID: 17454}
+      Script: {instanceID: 15592}
+    - Class: 114
+      Script: {instanceID: 15610}
+    - Class: 114
+      Script: {instanceID: 17484}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 143
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -176,13 +206,7 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11814}
-    - Class: 114
       Script: {instanceID: 11818}
-    - Class: 114
-      Script: {instanceID: 11928}
-    - Class: 114
-      Script: {instanceID: 12140}
     - Class: 114
       Script: {instanceID: 12238}
     - Class: 114
@@ -223,6 +247,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 15556}
     - Class: 114
       Script: {instanceID: 15592}
+    - Class: 114
+      Script: {instanceID: 17484}
+    - Class: 114
+      Script: {instanceID: 17730}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1004,7 +1032,7 @@ ScriptsOnlyBuild:
     className: PlayerMovementController
   - hash:
       serializedVersion: 2
-      Hash: 609e48cc044ff1c3f381336fc934987c
+      Hash: 0b1f109fe781fac43b0e3d6cc25948c9
     assemblyName: Assembly-CSharp.dll
     namespaceName: EmiCB.Lobby
     className: NetworkManagerLobby
@@ -1628,6 +1656,12 @@ ScriptsOnlyBuild:
     className: Projectile
   - hash:
       serializedVersion: 2
+      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: EmiCB.Lobby
+    className: NetworkGamePlayerLobby
+  - hash:
+      serializedVersion: 2
       Hash: 862148ee6f656c9befce49dba370ec3e
     assemblyName: Mirror.Examples.Cloud.GUI.dll
     namespaceName: Mirror.Cloud.Example
@@ -1712,10 +1746,16 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
+      Hash: 68e3b3743e25a780964e33aa595abec5
     assemblyName: Assembly-CSharp.dll
     namespaceName: EmiCB.Lobby
-    className: NetworkGamePlayerLobby
+    className: PlayerSpawnSystem
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: EmiCB.Lobby
+    className: PlayerSpawnPoint
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity

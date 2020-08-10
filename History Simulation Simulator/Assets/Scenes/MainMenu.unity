@@ -222,6 +222,8 @@ MonoBehaviour:
     type: 3}
   gamePlayerPrefab: {fileID: 5939479487013627219, guid: 91c6df2a33585ec45a169d535a273599,
     type: 3}
+  playerSpawnSystem: {fileID: 1216927237080027252, guid: bf9da8926cbb98d47a51b46ca7c45359,
+    type: 3}
 --- !u!114 &124605610
 MonoBehaviour:
   m_ObjectHideFlags: 0

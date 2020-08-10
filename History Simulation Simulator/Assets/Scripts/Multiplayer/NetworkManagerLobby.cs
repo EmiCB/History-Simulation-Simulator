@@ -17,10 +17,12 @@ namespace EmiCB.Lobby {
 
         [Header("Game")]
         [SerializeField] private NetworkGamePlayerLobby gamePlayerPrefab = null;
+        [SerializeField] private GameObject playerSpawnSystem = null;
 
         // custom events
         public static event Action OnClientConnected;
         public static event Action OnClientDisconnected;
+        public static event Action<NetworkConnection> OnServerRedied;
 
         // list of waiting players
         public List<NetworkRoomPlayerLobby> roomPlayers {get;} = new List<NetworkRoomPlayerLobby>();
@@ -119,6 +121,7 @@ namespace EmiCB.Lobby {
             }
         }
 
+        // handle scene changes
         public override void ServerChangeScene(string newSceneName) {
             // menu to game
             if (SceneManager.GetActiveScene().path == menuScene && newSceneName.Equals(gameScene)) {
@@ -133,6 +136,18 @@ namespace EmiCB.Lobby {
             }
 
             base.ServerChangeScene(newSceneName);
+        }
+        public override void OnServerSceneChanged(string sceneName) {
+            // check if main level
+            if (sceneName.Equals(gameScene)) {
+                GameObject playerSpawnSystemInstance = Instantiate(playerSpawnSystem);
+                NetworkServer.Spawn(playerSpawnSystem);
+            }
+        }
+
+        public override void OnServerReady(NetworkConnection conn) {
+            base.OnServerReady(conn);
+            OnServerRedied?.Invoke(conn);
         }
     }
 }
