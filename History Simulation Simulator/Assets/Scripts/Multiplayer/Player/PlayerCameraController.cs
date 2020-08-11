@@ -31,7 +31,7 @@ namespace EmiCB {
             enabled = true;
 
             // hide & lock cursor to center of screen
-            Cursor.lockState = CursorLockMode.Locked;
+            //Cursor.lockState = CursorLockMode.Locked;
 
             // hook up controls
             Controls.Player.Look.performed += ctx => Look(ctx.ReadValue<Vector2>());

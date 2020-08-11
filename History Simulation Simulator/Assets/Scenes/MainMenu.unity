@@ -769,10 +769,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: NewMainMenu
       objectReference: {fileID: 0}
-    - target: {fileID: 4934079721882592806, guid: 64e720f45832e9a438f78879c07355a4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64e720f45832e9a438f78879c07355a4, type: 3}

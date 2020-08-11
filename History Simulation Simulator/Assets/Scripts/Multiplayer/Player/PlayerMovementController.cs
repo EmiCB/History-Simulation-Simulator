@@ -48,7 +48,6 @@ public class PlayerMovementController : NetworkBehaviour {
         forward.y = 0.0f;
 
         Vector3 movement = right.normalized * previousInput.x + forward.normalized * previousInput.y;
-
         controller.Move(movement * movementSpeed * Time.deltaTime);
     }
 }

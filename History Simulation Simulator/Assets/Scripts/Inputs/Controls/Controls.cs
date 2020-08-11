@@ -43,6 +43,14 @@ namespace EmiCB.Inputs
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""bd46836f-8e2c-4358-8fff-c1c33679e737"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -115,11 +123,22 @@ namespace EmiCB.Inputs
                 {
                     ""name"": """",
                     ""id"": ""03bc07a6-d77d-4c83-a192-b5b4a483a672"",
-                    ""path"": ""<Keyboard>/q"",
+                    ""path"": ""<Keyboard>/tab"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard & Mouse"",
                     ""action"": ""Toggle Journal"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""70984233-b308-4dc1-a64b-dade6af032cb"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard & Mouse"",
+                    ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -150,6 +169,7 @@ namespace EmiCB.Inputs
             m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
             m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
             m_Player_ToggleJournal = m_Player.FindAction("Toggle Journal", throwIfNotFound: true);
+            m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -202,6 +222,7 @@ namespace EmiCB.Inputs
         private readonly InputAction m_Player_Look;
         private readonly InputAction m_Player_Move;
         private readonly InputAction m_Player_ToggleJournal;
+        private readonly InputAction m_Player_Jump;
         public struct PlayerActions
         {
             private @Controls m_Wrapper;
@@ -209,6 +230,7 @@ namespace EmiCB.Inputs
             public InputAction @Look => m_Wrapper.m_Player_Look;
             public InputAction @Move => m_Wrapper.m_Player_Move;
             public InputAction @ToggleJournal => m_Wrapper.m_Player_ToggleJournal;
+            public InputAction @Jump => m_Wrapper.m_Player_Jump;
             public InputActionMap Get() { return m_Wrapper.m_Player; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -227,6 +249,9 @@ namespace EmiCB.Inputs
                     @ToggleJournal.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnToggleJournal;
                     @ToggleJournal.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnToggleJournal;
                     @ToggleJournal.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnToggleJournal;
+                    @Jump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
+                    @Jump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
+                    @Jump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                 }
                 m_Wrapper.m_PlayerActionsCallbackInterface = instance;
                 if (instance != null)
@@ -240,6 +265,9 @@ namespace EmiCB.Inputs
                     @ToggleJournal.started += instance.OnToggleJournal;
                     @ToggleJournal.performed += instance.OnToggleJournal;
                     @ToggleJournal.canceled += instance.OnToggleJournal;
+                    @Jump.started += instance.OnJump;
+                    @Jump.performed += instance.OnJump;
+                    @Jump.canceled += instance.OnJump;
                 }
             }
         }
@@ -258,6 +286,7 @@ namespace EmiCB.Inputs
             void OnLook(InputAction.CallbackContext context);
             void OnMove(InputAction.CallbackContext context);
             void OnToggleJournal(InputAction.CallbackContext context);
+            void OnJump(InputAction.CallbackContext context);
         }
     }
 }

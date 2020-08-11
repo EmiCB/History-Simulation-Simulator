@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - EmiCB.Chat.ChatBehavior
     - EmiCB.Lobby.JoinLobbyMenu
     - EmiCB.Lobby.MainMenu
     - EmiCB.Lobby.NetworkGamePlayerLobby
@@ -121,75 +122,77 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12804}
     - Class: 114
-      Script: {instanceID: 12884}
+      Script: {instanceID: 12830}
     - Class: 114
-      Script: {instanceID: 13032}
+      Script: {instanceID: 12886}
     - Class: 114
-      Script: {instanceID: 13038}
+      Script: {instanceID: 13034}
     - Class: 114
-      Script: {instanceID: 13082}
+      Script: {instanceID: 13040}
     - Class: 114
-      Script: {instanceID: 13168}
+      Script: {instanceID: 13084}
     - Class: 114
-      Script: {instanceID: 13196}
+      Script: {instanceID: 13170}
     - Class: 114
-      Script: {instanceID: 13344}
+      Script: {instanceID: 13198}
     - Class: 114
-      Script: {instanceID: 13460}
+      Script: {instanceID: 13346}
     - Class: 114
-      Script: {instanceID: 13534}
+      Script: {instanceID: 13462}
     - Class: 114
-      Script: {instanceID: 13574}
+      Script: {instanceID: 13536}
     - Class: 114
-      Script: {instanceID: 13728}
+      Script: {instanceID: 13576}
     - Class: 114
-      Script: {instanceID: 13956}
+      Script: {instanceID: 13730}
     - Class: 114
-      Script: {instanceID: 13962}
+      Script: {instanceID: 13958}
     - Class: 114
-      Script: {instanceID: 14004}
+      Script: {instanceID: 13964}
     - Class: 114
-      Script: {instanceID: 14152}
+      Script: {instanceID: 14006}
     - Class: 114
-      Script: {instanceID: 14172}
+      Script: {instanceID: 14154}
     - Class: 114
-      Script: {instanceID: 14202}
+      Script: {instanceID: 14174}
     - Class: 114
-      Script: {instanceID: 14380}
+      Script: {instanceID: 14204}
     - Class: 114
-      Script: {instanceID: 14384}
+      Script: {instanceID: 14382}
     - Class: 114
-      Script: {instanceID: 14406}
+      Script: {instanceID: 14386}
     - Class: 114
-      Script: {instanceID: 14412}
+      Script: {instanceID: 14408}
     - Class: 114
-      Script: {instanceID: 14502}
+      Script: {instanceID: 14414}
     - Class: 114
-      Script: {instanceID: 14684}
+      Script: {instanceID: 14504}
     - Class: 114
-      Script: {instanceID: 14732}
+      Script: {instanceID: 14686}
     - Class: 114
-      Script: {instanceID: 14806}
+      Script: {instanceID: 14734}
     - Class: 114
-      Script: {instanceID: 14822}
+      Script: {instanceID: 14808}
     - Class: 114
-      Script: {instanceID: 14926}
+      Script: {instanceID: 14824}
     - Class: 114
-      Script: {instanceID: 15022}
+      Script: {instanceID: 14928}
     - Class: 114
-      Script: {instanceID: 15256}
+      Script: {instanceID: 15024}
     - Class: 114
-      Script: {instanceID: 15310}
+      Script: {instanceID: 15258}
     - Class: 114
-      Script: {instanceID: 15392}
+      Script: {instanceID: 15312}
     - Class: 114
-      Script: {instanceID: 15534}
+      Script: {instanceID: 15394}
     - Class: 114
-      Script: {instanceID: 15610}
+      Script: {instanceID: 15536}
     - Class: 114
-      Script: {instanceID: 15628}
+      Script: {instanceID: 15612}
     - Class: 114
-      Script: {instanceID: 29202}
+      Script: {instanceID: 15630}
+    - Class: 114
+      Script: {instanceID: 24620}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -240,47 +243,55 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12238}
     - Class: 114
-      Script: {instanceID: 12884}
+      Script: {instanceID: 12282}
     - Class: 114
-      Script: {instanceID: 13032}
+      Script: {instanceID: 12468}
     - Class: 114
-      Script: {instanceID: 13038}
+      Script: {instanceID: 12636}
     - Class: 114
-      Script: {instanceID: 13534}
+      Script: {instanceID: 12886}
     - Class: 114
-      Script: {instanceID: 13728}
+      Script: {instanceID: 13034}
     - Class: 114
-      Script: {instanceID: 13878}
+      Script: {instanceID: 13040}
     - Class: 114
-      Script: {instanceID: 13956}
+      Script: {instanceID: 13536}
     - Class: 114
-      Script: {instanceID: 14004}
+      Script: {instanceID: 13730}
     - Class: 114
-      Script: {instanceID: 14172}
+      Script: {instanceID: 13880}
     - Class: 114
-      Script: {instanceID: 14202}
+      Script: {instanceID: 13958}
     - Class: 114
-      Script: {instanceID: 14384}
+      Script: {instanceID: 14006}
     - Class: 114
-      Script: {instanceID: 14502}
+      Script: {instanceID: 14174}
     - Class: 114
-      Script: {instanceID: 14684}
+      Script: {instanceID: 14204}
     - Class: 114
-      Script: {instanceID: 14732}
+      Script: {instanceID: 14386}
     - Class: 114
-      Script: {instanceID: 14806}
+      Script: {instanceID: 14504}
     - Class: 114
-      Script: {instanceID: 14926}
+      Script: {instanceID: 14686}
     - Class: 114
-      Script: {instanceID: 15022}
+      Script: {instanceID: 14734}
     - Class: 114
-      Script: {instanceID: 15310}
+      Script: {instanceID: 14808}
     - Class: 114
-      Script: {instanceID: 15392}
+      Script: {instanceID: 14928}
     - Class: 114
-      Script: {instanceID: 15574}
+      Script: {instanceID: 15024}
     - Class: 114
-      Script: {instanceID: 15610}
+      Script: {instanceID: 15312}
+    - Class: 114
+      Script: {instanceID: 15394}
+    - Class: 114
+      Script: {instanceID: 15576}
+    - Class: 114
+      Script: {instanceID: 15612}
+    - Class: 114
+      Script: {instanceID: 24620}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -290,6 +301,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -706,6 +719,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Mask
+  - hash:
+      serializedVersion: 2
+      Hash: 6240b230a5cca068d4b5828688c478b7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: EmiCB.Lobby
+    className: PlayerIPInput
   - hash:
       serializedVersion: 2
       Hash: 083eba9bfa137d3541591a9c79dea11a
@@ -1824,10 +1843,10 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 6240b230a5cca068d4b5828688c478b7
+      Hash: f963d83a4654df0d5c9be7c233108abc
     assemblyName: Assembly-CSharp.dll
-    namespaceName: EmiCB.Lobby
-    className: PlayerIPInput
+    namespaceName: EmiCB.Chat
+    className: ChatBehavior
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
