@@ -9,10 +9,8 @@ namespace EmiCB.Lobby {
     public class NetworkRoomPlayerLobby : NetworkBehaviour {
         [Header("UI")]
         [SerializeField] private GameObject lobbyUI = null;
-        [SerializeField] private GameObject playerInfoPrefab = null;
-        [SerializeField] private GameObject contentParent = null;
-        [SerializeField] private TMP_Text[] playerNameTexts = null;
-        [SerializeField] private TMP_Text[] playerReadyTexts = null;
+        [SerializeField] private TMP_Text[] playerNameTexts = new TMP_Text[30];
+        [SerializeField] private TMP_Text[] playerReadyTexts = new TMP_Text[30];
         [SerializeField] private Button startGameButton = null;
 
         // server validate display name changes and ready status changes
@@ -37,12 +35,6 @@ namespace EmiCB.Lobby {
             }
         }
 
-        private void Awake() {
-            playerNameTexts = new TMP_Text[Room.maxConnections];
-            playerReadyTexts = new TMP_Text[Room.maxConnections];
-        }
-
-        //
         public override void OnStartAuthority() {
             CmdSetDisplayName(PlayerNameInput.displayName);
             lobbyUI.SetActive(true);
@@ -64,7 +56,7 @@ namespace EmiCB.Lobby {
 
         // update the UI
         private void UpdateDisplay() {
-            // find player that belongs to us
+            // find player that belongs to us before running
             if (!hasAuthority) {
                 foreach (var player in Room.roomPlayers) {
                     if (player.hasAuthority) {
@@ -75,11 +67,9 @@ namespace EmiCB.Lobby {
                 return;
             }
 
-            GeneratePlayerInfos();
-
             // clear all player texts
-            for (int i = 0; i < Room.roomPlayers.Count; i++) {
-                playerNameTexts[i].text = "Waiting For Player...";
+            for (int i = 0; i < Room.maxConnections; i++) {
+                playerNameTexts[i].text = "Waiting...";
                 playerReadyTexts[i].text = string.Empty;
             }
 
@@ -95,25 +85,6 @@ namespace EmiCB.Lobby {
             if (!isHost) return;
             startGameButton.interactable = isReadyToStart;
         }
-
-
-        private void GeneratePlayerInfos() {
-            // create buttons
-            for (int i = 0; i < Room.roomPlayers.Count; i++) {
-                if (playerNameTexts[i] == null) {
-                    GameObject newPlayerInfo = Instantiate(playerInfoPrefab);
-                    newPlayerInfo.transform.SetParent(contentParent.transform);
-                    newPlayerInfo.transform.localScale = Vector3.one;
-                    
-                    TMP_Text[] infoTexts = new TMP_Text[2];
-                    infoTexts = contentParent.GetComponentsInChildren<TMP_Text>();
-
-                    playerNameTexts[i] = infoTexts[0];
-                    playerReadyTexts[i] = infoTexts[1];
-                }
-            }
-        }
-
 
         // validate with server
         [Command]

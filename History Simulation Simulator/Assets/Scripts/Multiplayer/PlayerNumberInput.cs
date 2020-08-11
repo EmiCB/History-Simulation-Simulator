@@ -35,7 +35,7 @@ namespace EmiCB.Lobby {
             if (Int32.TryParse(playerNumberInputField.text, out number)) {
                 max = number;
                 continueButton.interactable = true;
-                networkManagerLobby.maxConnections = max;
+                networkManagerLobby.maxConnections = 30;
             }
             else {
                 Debug.LogError("Invalid Number!");
@@ -44,7 +44,7 @@ namespace EmiCB.Lobby {
         }
 
         // save player name after continuing
-        public void SavePlayerName() {
+        public void SavePlayerNumber() {
             maxPlayers = Int32.Parse(playerNumberInputField.text);
             PlayerPrefs.SetInt(playerPrefsMaxPlayersKey, maxPlayers);
         }

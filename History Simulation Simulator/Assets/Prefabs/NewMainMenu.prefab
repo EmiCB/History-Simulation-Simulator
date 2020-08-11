@@ -826,6 +826,7 @@ GameObject:
   - component: {fileID: 4934079720324387957}
   - component: {fileID: 4934079720324387958}
   - component: {fileID: 4934079720324387953}
+  - component: {fileID: 1604401547}
   m_Layer: 0
   m_Name: JoiningPanel
   m_TagString: Untagged
@@ -949,6 +950,20 @@ MonoBehaviour:
   landingPagePanel: {fileID: 4934079720324387947}
   ipAddressInputField: {fileID: 4934079720732395039}
   joinButton: {fileID: 4934079721483694271}
+--- !u!114 &1604401547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4934079720324387947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211e4134a1233b6459354ed624dd6722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ipInputField: {fileID: 4934079720732395039}
+  continueButton: {fileID: 4934079721483694271}
 --- !u!1 &4934079720374712255
 GameObject:
   m_ObjectHideFlags: 0
@@ -1868,7 +1883,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1604401547}
+        m_TargetAssemblyTypeName: EmiCB.Lobby.PlayerIPInput, Assembly-CSharp
+        m_MethodName: SetPlayerIP
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2242,7 +2269,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4934079720889528698
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2766,7 +2793,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -200}
   m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4934079721137840398
@@ -3610,6 +3637,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1604401547}
+        m_TargetAssemblyTypeName: EmiCB.Lobby.PlayerIPInput, Assembly-CSharp
+        m_MethodName: SavePlayerIP
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4934079721577785278
 GameObject:
   m_ObjectHideFlags: 0
@@ -4044,7 +4083,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -400}
   m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4934079721674775185
@@ -4154,8 +4193,8 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 4934079720189829159}
         m_TargetAssemblyTypeName: EmiCB.Lobby.PlayerNumberInput, Assembly-CSharp
-        m_MethodName: SetPlayerMax
-        m_Mode: 3
+        m_MethodName: SavePlayerNumber
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4518,7 +4557,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3741019421643273462
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4615,7 +4654,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 2225288693477495464}
   m_TextViewport: {fileID: 8283246751140932414}
   m_TextComponent: {fileID: 1301110859868807139}

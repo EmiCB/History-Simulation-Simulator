@@ -36,8 +36,8 @@ namespace EmiCB.Lobby {
 
             GameObject playerInstance = Instantiate(playerPrefab, spawnPoints[nextIndex].position, spawnPoints[nextIndex].rotation);
             NetworkServer.AddPlayerForConnection(conn, playerInstance);
-            nextIndex++;
-            //nextIndex = (nextIndex + 1) % spawnPoints.Count;
+            //nextIndex++;
+            nextIndex = (nextIndex + 1) % spawnPoints.Count;
         }
     }
 }

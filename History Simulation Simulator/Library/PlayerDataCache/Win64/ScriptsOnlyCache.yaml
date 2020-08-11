@@ -6,7 +6,9 @@ ScriptsOnlyBuild:
     - EmiCB.Lobby.NetworkGamePlayerLobby
     - EmiCB.Lobby.NetworkManagerLobby
     - EmiCB.Lobby.NetworkRoomPlayerLobby
+    - EmiCB.Lobby.PlayerIPInput
     - EmiCB.Lobby.PlayerNameInput
+    - EmiCB.Lobby.PlayerNumberInput
     - EmiCB.Lobby.PlayerSpawnPoint
     - EmiCB.Lobby.PlayerSpawnSystem
     - EmiCB.PlayerCameraController
@@ -14,6 +16,7 @@ ScriptsOnlyBuild:
     - PlayerDataController
     - PlayerMovementController
     - PlayerUIController
+    - QuitGameButton
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
     - Cinemachine.CinemachineCollider
@@ -59,10 +62,15 @@ ScriptsOnlyBuild:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.ContentSizeFitter
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.HorizontalLayoutGroup
     - UnityEngine.UI.Image
     - UnityEngine.UI.LayoutElement
+    - UnityEngine.UI.Mask
     - UnityEngine.UI.RectMask2D
+    - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Scrollbar
     - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
     Assets/Scenes/MainMenu.unity:
@@ -99,13 +107,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11818}
     - Class: 114
+      Script: {instanceID: 12176}
+    - Class: 114
       Script: {instanceID: 12238}
     - Class: 114
       Script: {instanceID: 12282}
     - Class: 114
+      Script: {instanceID: 12428}
+    - Class: 114
       Script: {instanceID: 12468}
     - Class: 114
       Script: {instanceID: 12636}
+    - Class: 114
+      Script: {instanceID: 12804}
     - Class: 114
       Script: {instanceID: 12884}
     - Class: 114
@@ -119,53 +133,63 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13196}
     - Class: 114
-      Script: {instanceID: 13532}
+      Script: {instanceID: 13344}
     - Class: 114
-      Script: {instanceID: 13572}
+      Script: {instanceID: 13460}
     - Class: 114
-      Script: {instanceID: 13726}
+      Script: {instanceID: 13534}
     - Class: 114
-      Script: {instanceID: 13954}
+      Script: {instanceID: 13574}
     - Class: 114
-      Script: {instanceID: 13960}
+      Script: {instanceID: 13728}
     - Class: 114
-      Script: {instanceID: 14002}
+      Script: {instanceID: 13956}
     - Class: 114
-      Script: {instanceID: 14150}
+      Script: {instanceID: 13962}
     - Class: 114
-      Script: {instanceID: 14170}
+      Script: {instanceID: 14004}
     - Class: 114
-      Script: {instanceID: 14200}
+      Script: {instanceID: 14152}
     - Class: 114
-      Script: {instanceID: 14382}
+      Script: {instanceID: 14172}
     - Class: 114
-      Script: {instanceID: 14404}
+      Script: {instanceID: 14202}
     - Class: 114
-      Script: {instanceID: 14410}
+      Script: {instanceID: 14380}
     - Class: 114
-      Script: {instanceID: 14500}
+      Script: {instanceID: 14384}
     - Class: 114
-      Script: {instanceID: 14682}
+      Script: {instanceID: 14406}
     - Class: 114
-      Script: {instanceID: 14730}
+      Script: {instanceID: 14412}
     - Class: 114
-      Script: {instanceID: 14804}
+      Script: {instanceID: 14502}
     - Class: 114
-      Script: {instanceID: 14922}
+      Script: {instanceID: 14684}
     - Class: 114
-      Script: {instanceID: 15018}
+      Script: {instanceID: 14732}
     - Class: 114
-      Script: {instanceID: 15252}
+      Script: {instanceID: 14806}
     - Class: 114
-      Script: {instanceID: 15306}
+      Script: {instanceID: 14822}
     - Class: 114
-      Script: {instanceID: 15388}
+      Script: {instanceID: 14926}
     - Class: 114
-      Script: {instanceID: 15530}
+      Script: {instanceID: 15022}
     - Class: 114
-      Script: {instanceID: 15606}
+      Script: {instanceID: 15256}
     - Class: 114
-      Script: {instanceID: 15624}
+      Script: {instanceID: 15310}
+    - Class: 114
+      Script: {instanceID: 15392}
+    - Class: 114
+      Script: {instanceID: 15534}
+    - Class: 114
+      Script: {instanceID: 15610}
+    - Class: 114
+      Script: {instanceID: 15628}
+    - Class: 114
+      Script: {instanceID: 29202}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -222,41 +246,41 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13038}
     - Class: 114
-      Script: {instanceID: 13532}
+      Script: {instanceID: 13534}
     - Class: 114
-      Script: {instanceID: 13726}
+      Script: {instanceID: 13728}
     - Class: 114
-      Script: {instanceID: 13876}
+      Script: {instanceID: 13878}
     - Class: 114
-      Script: {instanceID: 13954}
+      Script: {instanceID: 13956}
     - Class: 114
-      Script: {instanceID: 14002}
+      Script: {instanceID: 14004}
     - Class: 114
-      Script: {instanceID: 14170}
+      Script: {instanceID: 14172}
     - Class: 114
-      Script: {instanceID: 14200}
+      Script: {instanceID: 14202}
     - Class: 114
-      Script: {instanceID: 14382}
+      Script: {instanceID: 14384}
     - Class: 114
-      Script: {instanceID: 14500}
+      Script: {instanceID: 14502}
     - Class: 114
-      Script: {instanceID: 14682}
+      Script: {instanceID: 14684}
     - Class: 114
-      Script: {instanceID: 14730}
+      Script: {instanceID: 14732}
     - Class: 114
-      Script: {instanceID: 14804}
+      Script: {instanceID: 14806}
     - Class: 114
-      Script: {instanceID: 14922}
+      Script: {instanceID: 14926}
     - Class: 114
-      Script: {instanceID: 15018}
+      Script: {instanceID: 15022}
     - Class: 114
-      Script: {instanceID: 15306}
+      Script: {instanceID: 15310}
     - Class: 114
-      Script: {instanceID: 15388}
+      Script: {instanceID: 15392}
     - Class: 114
-      Script: {instanceID: 15570}
+      Script: {instanceID: 15574}
     - Class: 114
-      Script: {instanceID: 15606}
+      Script: {instanceID: 15610}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -870,6 +894,12 @@ ScriptsOnlyBuild:
     className: InputActionImporterEditor
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: QuitGameButton
+  - hash:
+      serializedVersion: 2
       Hash: 287a4aa7392bcfb309b4d7b4dc89eb3c
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem.Editor
@@ -1062,7 +1092,7 @@ ScriptsOnlyBuild:
     className: PlayerMovementController
   - hash:
       serializedVersion: 2
-      Hash: 0b1f109fe781fac43b0e3d6cc25948c9
+      Hash: 27d545a2d79077b165e05b3c20f6e166
     assemblyName: Assembly-CSharp.dll
     namespaceName: EmiCB.Lobby
     className: NetworkManagerLobby
@@ -1402,6 +1432,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine.PostFX
     className: CinemachineVolumeSettings
+  - hash:
+      serializedVersion: 2
+      Hash: 27a589f1c051b154f1f4a772c61aed47
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: EmiCB.Lobby
+    className: PlayerNumberInput
   - hash:
       serializedVersion: 2
       Hash: a6d026892e3f308e9d0619c6b07624ac
@@ -1786,6 +1822,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 6240b230a5cca068d4b5828688c478b7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: EmiCB.Lobby
+    className: PlayerIPInput
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity

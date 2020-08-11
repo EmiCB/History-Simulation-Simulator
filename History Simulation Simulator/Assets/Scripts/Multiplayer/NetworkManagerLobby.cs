@@ -8,6 +8,7 @@ using Mirror;
 namespace EmiCB.Lobby {
     public class NetworkManagerLobby : NetworkManager {
         [SerializeField] private int minPlayers = 1;
+        [SerializeField] private int defaultMaxPlayers = 30;
 
         [Scene] [SerializeField] private string menuScene = string.Empty;
         [Scene] [SerializeField] private string gameScene = string.Empty;
@@ -84,7 +85,7 @@ namespace EmiCB.Lobby {
             if (conn.identity != null) {
                 var player = conn.identity.GetComponent<NetworkRoomPlayerLobby>();
                 roomPlayers.Remove(player);
-                //NotifyPlayersOfReadyState();
+                NotifyPlayersOfReadyState();
             }
 
             base.OnClientDisconnect(conn);
