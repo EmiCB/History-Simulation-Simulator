@@ -9,8 +9,10 @@ namespace EmiCB.Lobby {
     public class NetworkRoomPlayerLobby : NetworkBehaviour {
         [Header("UI")]
         [SerializeField] private GameObject lobbyUI = null;
-        [SerializeField] private TMP_Text[] playerNameTexts = new TMP_Text[4];
-        [SerializeField] private TMP_Text[] playerReadyTexts = new TMP_Text[4];
+        [SerializeField] private GameObject playerInfoPrefab = null;
+        [SerializeField] private GameObject contentParent = null;
+        [SerializeField] private TMP_Text[] playerNameTexts = null;
+        [SerializeField] private TMP_Text[] playerReadyTexts = null;
         [SerializeField] private Button startGameButton = null;
 
         // server validate display name changes and ready status changes
@@ -33,6 +35,11 @@ namespace EmiCB.Lobby {
                 if (room != null) return room;
                 return room = NetworkManager.singleton as NetworkManagerLobby;
             }
+        }
+
+        private void Awake() {
+            playerNameTexts = new TMP_Text[Room.maxConnections];
+            playerReadyTexts = new TMP_Text[Room.maxConnections];
         }
 
         //
@@ -68,8 +75,10 @@ namespace EmiCB.Lobby {
                 return;
             }
 
+            GeneratePlayerInfos();
+
             // clear all player texts
-            for (int i = 0; i < playerNameTexts.Length; i++) {
+            for (int i = 0; i < Room.roomPlayers.Count; i++) {
                 playerNameTexts[i].text = "Waiting For Player...";
                 playerReadyTexts[i].text = string.Empty;
             }
@@ -85,6 +94,24 @@ namespace EmiCB.Lobby {
         public void HandleReadyToStart(bool isReadyToStart) {
             if (!isHost) return;
             startGameButton.interactable = isReadyToStart;
+        }
+
+
+        private void GeneratePlayerInfos() {
+            // create buttons
+            for (int i = 0; i < Room.roomPlayers.Count; i++) {
+                if (playerNameTexts[i] == null) {
+                    GameObject newPlayerInfo = Instantiate(playerInfoPrefab);
+                    newPlayerInfo.transform.SetParent(contentParent.transform);
+                    newPlayerInfo.transform.localScale = Vector3.one;
+                    
+                    TMP_Text[] infoTexts = new TMP_Text[2];
+                    infoTexts = contentParent.GetComponentsInChildren<TMP_Text>();
+
+                    playerNameTexts[i] = infoTexts[0];
+                    playerReadyTexts[i] = infoTexts[1];
+                }
+            }
         }
 
 

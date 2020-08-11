@@ -2235,6 +2235,7 @@ GameObject:
   - component: {fileID: 4934079720889528645}
   - component: {fileID: 4934079720889528647}
   - component: {fileID: 4934079720889528646}
+  - component: {fileID: 4934079720189829159}
   m_Layer: 0
   m_Name: HostingPanel
   m_TagString: Untagged
@@ -2341,6 +2342,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameInputField: {fileID: 4934079721137840396}
+  continueButton: {fileID: 4934079721674775191}
+--- !u!114 &4934079720189829159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4934079720889528699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5cf0beb1df4f0945a594bc44f468429, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  networkManagerLobby: {fileID: 0}
+  playerNumberInputField: {fileID: 7153446365975719743}
   continueButton: {fileID: 4934079721674775191}
 --- !u!1 &4934079721002345736
 GameObject:
@@ -4136,6 +4152,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4934079720189829159}
+        m_TargetAssemblyTypeName: EmiCB.Lobby.PlayerNumberInput, Assembly-CSharp
+        m_MethodName: SetPlayerMax
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4934079721801497873
 GameObject:
   m_ObjectHideFlags: 0
@@ -4627,7 +4655,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4934079720189829159}
+        m_TargetAssemblyTypeName: EmiCB.Lobby.PlayerNumberInput, Assembly-CSharp
+        m_MethodName: SetPlayerMax
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []
