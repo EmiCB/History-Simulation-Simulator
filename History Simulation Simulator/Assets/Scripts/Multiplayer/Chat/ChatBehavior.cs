@@ -4,6 +4,7 @@ using System;
 using UnityEngine;
 using Mirror;
 using TMPro;
+using EmiCB.Lobby;
 
 namespace EmiCB.Chat {
     public class ChatBehavior : NetworkBehaviour {
@@ -12,6 +13,8 @@ namespace EmiCB.Chat {
         [SerializeField] private TMP_InputField inputField = null;
 
         private static event Action<string> OnMessage;
+
+        [SerializeField] private string playerName = null;
 
         // subscribe and unsubscribe to event
         public override void OnStartAuthority() {
@@ -45,7 +48,8 @@ namespace EmiCB.Chat {
         [Command]
         private void CmdSendMessage(string message) {
             // TODO: change to be player name
-            RpcHandleMessage($"[{connectionToClient.connectionId}]: {message}");
+            if (playerName == null) playerName = connectionToClient.connectionId.ToString();
+            RpcHandleMessage($"[{playerName}]: {message}");
         }
 
         // put message on new line 

@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f945127bbeb9c3449b8ac83f3a2150ea, type: 3}
+  m_Name: Deborah Katz
+  m_EditorClassIdentifier: 
+  characterName: 'Deborah Katz '
+  title: "Female Graduate Student, Women\u2019s Liberation Cadre Leader"
+  biography: "Your parents were both Polish-American Jews who grew up in Chicago
+    and met there, but then moved to the suburbs when you were in elementary school
+    in the late 1940s.  Your parents were socialists (and still are to some extent,
+    though they told you that they have tried to keep their beliefs quiet ever since
+    the Red Scare).  They made you go to Hebrew school, but you are fairly secular
+    today, although you do credit your belief in the importance of social justice
+    to your Jewish cultural heritage.  You have always excelled in school, graduated
+    with honors from University of Chicago, and are currently writing your dissertation
+    in Sociology.\r\nYou are strongly opposed to the Vietnam War.  It is an example
+    of the United States\u2019 effort to dominate other countries and oppress their
+    people, which is in turn a manifestation of male oppression.  Like the Redstockings
+    said in their manifesto, \u201CAll other forms of exploitation and oppression
+    (racism, capitalism, imperialism, etc.) are extensions of male supremacy: men
+    dominate women, a few men dominate the rest.\u201D  As such, the war must be
+    stopped.\r\nBut that can\u2019t be the only item on the radical agenda.  Women
+    are an oppressed class in every aspect of their lives: at home, at school, in
+    politics, and at work (if they are allowed to work!)  Even among the radical
+    leftists, misogyny runs rampant.  You used to be a member of organizations like
+    the Radical Union, but the men who ran those organizations only paid lip service
+    to women\u2019s issues. That\u2019s why you started the Women\u2019s Liberation
+    Cadre, so women could mobilize to free themselves from their oppressors.  Your
+    goal to raise women\u2019s consciousness so they see how they are oppressed and
+    fight for their liberation.  If you mobilize as a group, you can pressure the
+    powers-that-be to change policies, and the other leftists will be forced to recognize
+    the agenda of women\u2019s liberation.  For example, you were able to get the
+    Radical Union to join you in threatening to picket the recent Date Auction at
+    Newman Center (see readings)\u2014where women (described as cheerleaders and
+    pompom girls!) were being auctioned off to the highest bidder.  You forced the
+    organizers to shut down the event, though you heard rumors that other people
+    are trying to hold the event in a new location.\r\nAs leader of the WLC, you
+    need to make sure to do what it takes to make sure that women\u2019s issues are
+    included in any broader radical program.  Do not let your interests be overlooked!\r\n"

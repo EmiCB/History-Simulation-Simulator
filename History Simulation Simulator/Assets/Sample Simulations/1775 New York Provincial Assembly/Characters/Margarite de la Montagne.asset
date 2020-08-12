@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f945127bbeb9c3449b8ac83f3a2150ea, type: 3}
+  m_Name: Margarite de la Montagne
+  m_EditorClassIdentifier: 
+  characterName: Margarite de la Montagne
+  title: Tavern Owner and Widow, Crowd
+  biography: "You are the owner of a tavern, which is located directly across from
+    the Common on Broadway, between Warren and Murray Streets. Your name reflects
+    your French ancestry, as you and your husband\u2019s family date back to the
+    Huguenot wave of French Protestants who came to New York in the 1600s. Most of
+    your\r women friends call you Peg, but most men call you \u201CWidow Montagne,\u201D
+    a term of respect for your ability to run your tavern profitably in a town with
+    over 300 competitors. You are known as tough but fair dealer with your suppliers,
+    and a woman who serves all customers.\r\n\r\nYour marriage lasted but 12 years,
+    and produced one son who is now 17. Like many brides in this generation, you
+    went to the altar pregnant. All subsequent pregnancies ended in miscarriages
+    or stillbirths.  Your husband died before he could inherit land from his father
+    located in Harlem, but your husband did leave you all of his real and personal
+    property in his will. Primarily, that property was the tavern (which has two
+    stories, the second floor has rooms which you rent out) and the town lot on which
+    it is located. You are thus a property owner, a taxpayer (you would easily qualify
+    for the vote if you were\r\nmale), and for the last 5 years you have made it
+    a profitable business, surviving the political winds and protecting your son
+    from harm. You have done well enough to purchase a slave, and have thus been
+    able to release your son from helping in the tavern, so that he might learn the
+    trade of printing. He is now an apprentice, still living at home, but he is fired
+    with patriotic zeal. He has been running with the mobs, protecting the Liberty
+    Pole at night.\r\n\r\nYou too lean to the patriot\u2019s side, and you are happy
+    your son has such fierce convictions. You worry about losing him in a war\u2014he\u2019s
+    your only child. What can be worth the life of a child? You believe in the cause
+    of the patriots, in their arguments. You have seen the British soldiers in your
+    place with prostitutes, many of them just young girls of families you know that
+    have fallen on hard times. You have been willing to participate in the boycotts
+    to halt British control over New York and the colonies. You are also happy to
+    join a mob to help the Patriot cause.  But you do sometimes wonder: is not my
+    property taxed without my consent by the colony same as it would be by the British?\r"

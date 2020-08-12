@@ -4,18 +4,19 @@ Submission for HackIllinois 2020.
 This project is meant to be a simple game creator for educators. Specifically, it is targeted at history teachers who want to continue to run their simulations in
 the absence of a classroom. 
 
-## Using
-* Unity 2020.1.0f1
-    * [Mirror Networking](https://mirror-networking.com/)
+## Tools
+* Unity v2020.1.0f1
+    * [Mirror Networking v16.10.3](https://mirror-networking.com/)
     * Cinemachine
     * TextMeshPro
-* Blender 2.83
+* Blender v2.83
 
 ## Features
-_Last Updated: August 9, 2020_
+_Last Updated: August 12, 2020_
 
 * Multiplayer support (hosting & joining servers)
-* Sever lobby
+* Lobby with character selection & ready checking
+* Demo simulation scene + characters 
 
 > Please see the CHANGELOG for more details
 

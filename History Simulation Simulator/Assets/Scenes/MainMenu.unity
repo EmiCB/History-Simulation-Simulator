@@ -221,7 +221,7 @@ MonoBehaviour:
   gameScene: Assets/Scenes/Simulation.unity
   roomPlayerPrefab: {fileID: 5389481526012172901, guid: 07264f82194c6e54ab654f5630989534,
     type: 3}
-  gamePlayerPrefab: {fileID: 5939479487013627219, guid: 91c6df2a33585ec45a169d535a273599,
+  gamePlayerPrefab: {fileID: -5119061541383890267, guid: aa82387dcea7a7242b5fb20bc6b4878f,
     type: 3}
   playerSpawnSystem: {fileID: 1216927237080027252, guid: bf9da8926cbb98d47a51b46ca7c45359,
     type: 3}
@@ -768,6 +768,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NewMainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934079721882592806, guid: 64e720f45832e9a438f78879c07355a4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64e720f45832e9a438f78879c07355a4, type: 3}

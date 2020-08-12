@@ -34,8 +34,10 @@ namespace EmiCB.Lobby {
                 return;
             }
 
+            // spawn player & link the connection
             GameObject playerInstance = Instantiate(playerPrefab, spawnPoints[nextIndex].position, spawnPoints[nextIndex].rotation);
             NetworkServer.AddPlayerForConnection(conn, playerInstance);
+
             //circular spawning
             nextIndex = (nextIndex + 1) % spawnPoints.Count;
         }

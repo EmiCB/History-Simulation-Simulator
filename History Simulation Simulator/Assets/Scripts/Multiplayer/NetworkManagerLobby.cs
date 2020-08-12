@@ -7,9 +7,11 @@ using Mirror;
 
 namespace EmiCB.Lobby {
     public class NetworkManagerLobby : NetworkManager {
+        [Header("Server Settings")]
         [SerializeField] private int minPlayers = 1;
         [SerializeField] private int defaultMaxPlayers = 30;
 
+        [Header("Scenes")]
         [Scene] [SerializeField] private string menuScene = string.Empty;
         [Scene] [SerializeField] private string gameScene = string.Empty;
 
@@ -25,7 +27,7 @@ namespace EmiCB.Lobby {
         public static event Action OnClientDisconnected;
         public static event Action<NetworkConnection> OnServerRedied;
 
-        // list of waiting players
+        // lists of players
         public List<NetworkRoomPlayerLobby> roomPlayers {get;} = new List<NetworkRoomPlayerLobby>();
         public List<NetworkGamePlayerLobby> gamePlayers {get;} = new List<NetworkGamePlayerLobby>();
 
@@ -117,8 +119,7 @@ namespace EmiCB.Lobby {
         public void StartGame() {
             if (SceneManager.GetActiveScene().path == menuScene) {
                 if (!IsReadyToStart()) return;
-
-                ServerChangeScene("Simulation");
+                ServerChangeScene(gameScene);
             }
         }
 
@@ -129,8 +130,12 @@ namespace EmiCB.Lobby {
                 for (int i = roomPlayers.Count - 1; i  >= 0; i--) {
                     var conn = roomPlayers[i].connectionToClient;
                     var gamePlayerInstance = Instantiate(gamePlayerPrefab);
-                    gamePlayerInstance.SetDisplayName(roomPlayers[i].displayName);
 
+                    // transfer room player attributes
+                    gamePlayerInstance.SetDisplayName(roomPlayers[i].displayName);
+                    gamePlayerInstance.SetCharacterData(roomPlayers[i].characterData);
+
+                    // remove room player instance
                     NetworkServer.Destroy(conn.identity.gameObject);
                     NetworkServer.ReplacePlayerForConnection(conn, gamePlayerInstance.gameObject, true);
                 }
@@ -138,9 +143,10 @@ namespace EmiCB.Lobby {
 
             base.ServerChangeScene(newSceneName);
         }
+
         public override void OnServerSceneChanged(string sceneName) {
             // check if main level
-            if (sceneName.Equals(gameScene)) {
+            if (sceneName.Equals("Simulation")) {
                 GameObject playerSpawnSystemInstance = Instantiate(playerSpawnSystem);
                 NetworkServer.Spawn(playerSpawnSystem);
             }

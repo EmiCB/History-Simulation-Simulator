@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
+using EmiCB;
 using EmiCB.Inputs;
 
 public class PlayerUIController : NetworkBehaviour{
-    [SerializeField] private Canvas playerUI;
+    [SerializeField] private GameObject journal;
 
-    [SerializeField] private bool isJournalOpen;
+    [SerializeField] private bool isJournalOpen = false;
 
     private Controls controls;
     private Controls Controls {
@@ -20,7 +21,6 @@ public class PlayerUIController : NetworkBehaviour{
     public override void OnStartAuthority() {
         enabled = true;
 
-        isJournalOpen = false;
         Controls.Player.ToggleJournal.performed += ctx => ToggleJournal();
     }
 
@@ -35,15 +35,15 @@ public class PlayerUIController : NetworkBehaviour{
         isJournalOpen = !isJournalOpen;
 
         if (isJournalOpen) {
-            playerUI.gameObject.SetActive(true);
-
-            // hide & lock cursor to center of screen
+            journal.gameObject.SetActive(true);
+            // disable camera movement & hide & lock cursor to center of screen
+            // TODO: camera stuff
             Cursor.lockState = CursorLockMode.None;
         }
         else {
-            playerUI.gameObject.SetActive(false);
-
-            // hide & lock cursor to center of screen
+            journal.gameObject.SetActive(false);
+            // enable camera movement & hide & lock cursor to center of screen
+            // TODO: camera stuff
             Cursor.lockState = CursorLockMode.Locked;
         }
     }

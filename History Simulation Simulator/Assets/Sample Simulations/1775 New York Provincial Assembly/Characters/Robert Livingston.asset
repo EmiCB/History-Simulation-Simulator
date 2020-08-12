@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f945127bbeb9c3449b8ac83f3a2150ea, type: 3}
+  m_Name: Robert Livingston
+  m_EditorClassIdentifier: 
+  characterName: Robert Livingston
+  title: Wealthy Landowner, Patriot
+  biography: "You are a filthy rich landowner with a number of slaves, as well as
+    a lot of tenant farmers who work your land and pay rent (this is how you make
+    most of your money).  You also make money in trade; significantly, any goods
+    that your tenant farmers buy are from the shops that you own.  You also control
+    money lending.   You are a man of great importance, and you should make sure
+    that everyone calls you Mister Livingston.  \r\nThere are two major political
+    factions in New York Politics.  One is controlled by James Delancey, and you
+    control the other.  That means that many other politicians listen to what you
+    say. When your faction controls the New York Assembly, you also control important
+    government jobs and give them out to your supporters.  \r\nThe Delancey faction
+    has moved towards the Loyalist side in recent years. For this reason (more than
+    your principled opposition to British policies) you have sided with the Patriots.
+    More than anything, you want political power, but you are very happy to speak
+    eloquently about your deep convictions regarding liberty and the evils of taxation
+    without representation.  \r\nAs a Patriot, you have decided to ally with the
+    Sons of Liberty.  However, you feel a little uneasy about this.  They participate
+    in a lot of mob action, and that worries you, since you are a wealthy property
+    owner and a moderate (You don\u2019t like disorder among the rabble).  That said,
+    you realize that it is essential to have the support of the Sons of Liberty to
+    retain power.  After all, you used to have their support in 1765 when the Stamp
+    Act was repealed, but then they defected to the Delancey faction in the late
+    1760s, and then you lost control of the assembly!  Now that the Delancey\u2019s
+    have moved towards the loyalists, the Sons of Liberty are back supporting you,
+    and you want to keep their support. \r\nThat said, you are far too respectable
+    to participate in mobs or orchestrate in mob activity.  Make sure that Sears
+    and McDougall (your patriot colleagues and leaders of the Sons of Liberty) are
+    the ones who lead the mobs.\r\nFinally, know that you are very rich. Therefore,
+    you can use your wealth to bribe one of the moderates ONCE in the game.  The
+    moderates are all farmers who owe money to a lender (not you), and you can offer
+    to pay off their debts in exchange for their political support in the next vote. 
+    You can make this arrangement outside of class.  I\u2019ll need a signed agreement
+    so that I know the deal took place.  "

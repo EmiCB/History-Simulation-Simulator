@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f945127bbeb9c3449b8ac83f3a2150ea, type: 3}
+  m_Name: Sharon Bates
+  m_EditorClassIdentifier: 
+  characterName: Sharon Bates
+  title: "Junior Female, Women\u2019s Liberation Cadre"
+  biography: "You were born in a small town about an hour from Champaign-Urbana,
+    and never felt like you quite fit in.  While everyone else was going to the pep
+    rally for the football game, you were off somewhere reading a book.  You started
+    really thinking about politics during high school, and you came to realize that
+    you believed different things than most of the conservative people around you,
+    including your parents.  You also came to really resent the way women were treated
+    in your community; it seemed like none of the men did any work around the house,
+    while the women were expected to do everything with cooking and childcare.  You
+    love your dad, but you\u2019re not sure you\u2019ve ever seen him clean a dish.\r\nWhen
+    you came to campus at the University of Illinois, you became strongly opposed
+    to the Vietnam War.  It is an example of the United States\u2019 effort to dominate
+    other countries and oppress their people, which is in turn a manifestation of
+    male oppression.  Like the Redstockings said in their manifesto, \u201CAll other
+    forms of exploitation and oppression (racism, capitalism, imperialism, etc.)
+    are extensions of male supremacy: men dominate women, a few men dominate the
+    rest.\u201D  As such, the war must be stopped.\r\nYou\u2019ve been involved in
+    antiwar activism throughout your time at University of Illinois\u2014you were
+    even arrested during the GE protests.  But you are also a member of the Women\u2019s
+    Liberation Cadre because you need to fight alongside other women to win freedom
+    for yourselves.  For example, you were able to get the Radical Union to join
+    you in threatening to picket the recent Date Auction at Newman Center (see readings)\u2014where
+    women (described as cheerleaders and pompom girls!) were being auctioned off
+    to the highest bidder.  You forced the organizers to shut down the event, though
+    you heard rumors that other people are trying to hold the event in a new location.
+    In your reading, you\u2019ll find other issues that your character is passionate
+    about.\r\nAs a member of the WLC, you need to make sure to do what it takes to
+    make sure that women\u2019s issues are included in any broader radical program. 
+    Do not let your interests be overlooked!\r"

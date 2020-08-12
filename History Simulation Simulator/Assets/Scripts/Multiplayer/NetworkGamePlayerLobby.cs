@@ -7,9 +7,11 @@ using TMPro;
 
 namespace EmiCB.Lobby {
     public class NetworkGamePlayerLobby : NetworkBehaviour {
-        // server validate display name changes and ready status changes
+        // server validate display name and character data
         [SyncVar]
-        private string displayName = "Loading...";
+        public string displayName = "Loading...";
+        [SyncVar]
+        public CharacterData characterData = null;
 
         /*
         private bool isHost;
@@ -42,6 +44,11 @@ namespace EmiCB.Lobby {
         [Server]
         public void SetDisplayName(string displayName) {
             this.displayName = displayName;
+        }
+
+        [Server]
+        public void SetCharacterData(CharacterData characterData) {
+            this.characterData = characterData;
         }
     }
 }

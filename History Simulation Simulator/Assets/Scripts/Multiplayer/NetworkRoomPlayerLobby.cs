@@ -19,6 +19,9 @@ namespace EmiCB.Lobby {
         [SyncVar(hook = nameof(HandleReadyStatusChanged))]
         public bool isReady = false;
 
+        [SyncVar]
+        public CharacterData characterData = null;
+
         private bool isHost;
         public bool IsHost {
             set {
@@ -97,6 +100,11 @@ namespace EmiCB.Lobby {
         public void CmdReadyUp() {
             isReady = !isReady;
             Room.NotifyPlayersOfReadyState();
+        }
+
+        [Command]
+        public void CmdSetCharacterData(CharacterData characterData) {
+            this.characterData = characterData;
         }
 
         [Command]
