@@ -1,14 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System;
+﻿using System;
 using UnityEngine;
 using Mirror;
 using TMPro;
-using EmiCB.Lobby;
 
 namespace EmiCB.Chat {
     public class ChatBehavior : NetworkBehaviour {
-        [SerializeField] private GameObject chatUI = null;
         [SerializeField] private TMP_Text chatText = null;
         [SerializeField] private TMP_InputField inputField = null;
 
@@ -18,7 +14,6 @@ namespace EmiCB.Chat {
 
         // subscribe and unsubscribe to event
         public override void OnStartAuthority() {
-            chatUI.SetActive(true);
             OnMessage += HandleNewMessage;
         }
         [ClientCallback]
@@ -47,8 +42,7 @@ namespace EmiCB.Chat {
         // format message, where we validate
         [Command]
         private void CmdSendMessage(string message) {
-            // TODO: change to be player name
-            if (playerName == null) playerName = connectionToClient.connectionId.ToString();
+            playerName = GetComponent<PlayerDataController>().displayName;
             RpcHandleMessage($"[{playerName}]: {message}");
         }
 

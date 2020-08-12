@@ -30,9 +30,9 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Jump",
+                    "name": "Toggle Chat",
                     "type": "Button",
-                    "id": "bd46836f-8e2c-4358-8fff-c1c33679e737",
+                    "id": "3ada489d-6828-4b4e-994e-64e685fbdb2a",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -118,12 +118,12 @@
                 },
                 {
                     "name": "",
-                    "id": "70984233-b308-4dc1-a64b-dade6af032cb",
-                    "path": "<Keyboard>/space",
+                    "id": "f26d64fe-cf65-41b5-b293-9b7cd099ac48",
+                    "path": "<Keyboard>/t",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard & Mouse",
-                    "action": "Jump",
+                    "action": "Toggle Chat",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

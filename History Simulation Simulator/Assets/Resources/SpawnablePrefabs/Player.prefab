@@ -152,7 +152,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &487608793
 RectTransform:
   m_ObjectHideFlags: 0
@@ -461,7 +461,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 808108983046578575}
         m_TargetAssemblyTypeName: EmiCB.Chat.ChatBehavior, Assembly-CSharp
         m_MethodName: Send
         m_Mode: 1
@@ -1285,6 +1285,7 @@ GameObject:
   - component: {fileID: 8454449574142791410}
   - component: {fileID: 1618807601767191091}
   - component: {fileID: -5119061541383890267}
+  - component: {fileID: 808108983046578575}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1403,15 +1404,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5281452299925695855}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a0aa73fc228f27438f3c00d59fbc2e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  canvas: {fileID: 487608792}
   journal: {fileID: 687651259390008621}
+  chat: {fileID: 1180985021}
   isJournalOpen: 0
+  isChatOpen: 0
 --- !u!114 &1618807601767191091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1424,6 +1428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 135fd04e2106e354aa925284891f6397, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  displayName: 
   characterData: {fileID: 0}
   nameText: {fileID: 2656155276883744429}
   titleText: {fileID: 4389081795374483844}
@@ -1444,6 +1449,23 @@ MonoBehaviour:
   syncInterval: 0.1
   displayName: Loading...
   characterData: {fileID: 0}
+--- !u!114 &808108983046578575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5281452299925695855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 376eaec8fafe73a4096473bcbd7119d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  chatText: {fileID: 1781672449}
+  inputField: {fileID: 1513544580}
+  playerName: 
 --- !u!1 &5686725472489507215
 GameObject:
   m_ObjectHideFlags: 0
