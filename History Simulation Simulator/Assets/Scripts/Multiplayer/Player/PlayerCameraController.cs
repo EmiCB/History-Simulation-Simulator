@@ -10,14 +10,6 @@ namespace EmiCB {
         [SerializeField] private Vector2 cameraVelocity = new Vector2(4.0f, 0.25f);
         [SerializeField] private Transform playerTransform = null;
         [SerializeField] private CinemachineVirtualCamera virtualCamera = null;
-
-        private Controls controls;
-        private Controls Controls {
-            get {
-                if (controls != null) return controls;
-                return controls = new Controls();
-            }
-        }
         
         private CinemachineTransposer transposer;
 
@@ -34,14 +26,8 @@ namespace EmiCB {
             Cursor.lockState = CursorLockMode.Locked;
 
             // hook up controls
-            Controls.Player.Look.performed += ctx => Look(ctx.ReadValue<Vector2>());
+            InputManager.Controls.Player.Look.performed += ctx => Look(ctx.ReadValue<Vector2>());
         }
-
-        // handle subscriptions, only on client
-        [ClientCallback]
-        private void OnEnable() => Controls.Enable();
-        [ClientCallback]
-        private void OnDisable() => Controls.Disable();
 
         private void Look(Vector2 lookAxis) {
             float deltaTime = Time.deltaTime;
