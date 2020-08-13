@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using Mirror;
 using Cinemachine;
-using EmiCB.Inputs;
 
 namespace EmiCB {
     public class PlayerCameraController : NetworkBehaviour {
