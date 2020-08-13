@@ -7,6 +7,7 @@ using TMPro;
 public class PlayerUIController : NetworkBehaviour{
     [SerializeField] private GameObject canvas;
 
+    [SerializeField] private GameObject infoScreen;
     [SerializeField] private GameObject journal;
     [SerializeField] private GameObject chat;
 
@@ -19,6 +20,9 @@ public class PlayerUIController : NetworkBehaviour{
 
         InputManager.Controls.Player.ToggleJournal.performed += ctx => ToggleJournal();
         InputManager.Controls.Player.ToggleChat.performed += ctx => ToggleChat();
+        InputManager.Controls.Player.ExitInfoScreen.performed += ctx => ExitInfoScreen();
+
+        InputManager.Add(ActionMapNames.Player);
     }
 
     [Client]
@@ -44,7 +48,7 @@ public class PlayerUIController : NetworkBehaviour{
     }
 
     [Client]
-     private void ToggleChat() {
+    private void ToggleChat() {
         isChatOpen = !isChatOpen;
 
         if (isChatOpen) {
@@ -63,6 +67,13 @@ public class PlayerUIController : NetworkBehaviour{
             InputManager.Remove(ActionMapNames.Player);
             Cursor.lockState = CursorLockMode.Locked;
         }
+    }
+
+    [Client]
+    private void ExitInfoScreen() {
+        if (!infoScreen.activeSelf) return;
+        infoScreen.SetActive(false);
+        InputManager.Remove(ActionMapNames.Player);
     }
 
 

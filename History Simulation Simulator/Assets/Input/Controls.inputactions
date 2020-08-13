@@ -36,6 +36,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "ExitInfoScreen",
+                    "type": "Button",
+                    "id": "4323ce4d-4997-4404-aa27-da7f83a6804e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -124,6 +132,17 @@
                     "processors": "",
                     "groups": "Keyboard & Mouse",
                     "action": "Toggle Chat",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e0a92bab-4e53-4bea-a9ba-59b8866b72a7",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard & Mouse",
+                    "action": "ExitInfoScreen",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

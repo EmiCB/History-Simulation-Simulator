@@ -12,6 +12,7 @@ the absence of a classroom.
     * Cinemachine
     * TextMeshPro
     * [Medieval Tavern Pack](https://assetstore.unity.com/packages/3d/props/furniture/medieval-tavern-pack-112546) for placeholder scene
+    * [Sketch of Tun Tavern in the Revolutionary War](https://commons.wikimedia.org/wiki/File:Sketch_of_Tun_Tavern_in_the_Revolutionary_War.jpg) for placeholder loading screen
 * Blender v2.83
 
 ## Features

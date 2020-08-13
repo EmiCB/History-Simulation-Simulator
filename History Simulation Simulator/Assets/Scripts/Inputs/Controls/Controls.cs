@@ -51,6 +51,14 @@ namespace EmiCB.Inputs
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""ExitInfoScreen"",
+                    ""type"": ""Button"",
+                    ""id"": ""4323ce4d-4997-4404-aa27-da7f83a6804e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -141,6 +149,17 @@ namespace EmiCB.Inputs
                     ""action"": ""Toggle Chat"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e0a92bab-4e53-4bea-a9ba-59b8866b72a7"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard & Mouse"",
+                    ""action"": ""ExitInfoScreen"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -170,6 +189,7 @@ namespace EmiCB.Inputs
             m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
             m_Player_ToggleJournal = m_Player.FindAction("Toggle Journal", throwIfNotFound: true);
             m_Player_ToggleChat = m_Player.FindAction("Toggle Chat", throwIfNotFound: true);
+            m_Player_ExitInfoScreen = m_Player.FindAction("ExitInfoScreen", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -223,6 +243,7 @@ namespace EmiCB.Inputs
         private readonly InputAction m_Player_Move;
         private readonly InputAction m_Player_ToggleJournal;
         private readonly InputAction m_Player_ToggleChat;
+        private readonly InputAction m_Player_ExitInfoScreen;
         public struct PlayerActions
         {
             private @Controls m_Wrapper;
@@ -231,6 +252,7 @@ namespace EmiCB.Inputs
             public InputAction @Move => m_Wrapper.m_Player_Move;
             public InputAction @ToggleJournal => m_Wrapper.m_Player_ToggleJournal;
             public InputAction @ToggleChat => m_Wrapper.m_Player_ToggleChat;
+            public InputAction @ExitInfoScreen => m_Wrapper.m_Player_ExitInfoScreen;
             public InputActionMap Get() { return m_Wrapper.m_Player; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -252,6 +274,9 @@ namespace EmiCB.Inputs
                     @ToggleChat.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnToggleChat;
                     @ToggleChat.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnToggleChat;
                     @ToggleChat.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnToggleChat;
+                    @ExitInfoScreen.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnExitInfoScreen;
+                    @ExitInfoScreen.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnExitInfoScreen;
+                    @ExitInfoScreen.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnExitInfoScreen;
                 }
                 m_Wrapper.m_PlayerActionsCallbackInterface = instance;
                 if (instance != null)
@@ -268,6 +293,9 @@ namespace EmiCB.Inputs
                     @ToggleChat.started += instance.OnToggleChat;
                     @ToggleChat.performed += instance.OnToggleChat;
                     @ToggleChat.canceled += instance.OnToggleChat;
+                    @ExitInfoScreen.started += instance.OnExitInfoScreen;
+                    @ExitInfoScreen.performed += instance.OnExitInfoScreen;
+                    @ExitInfoScreen.canceled += instance.OnExitInfoScreen;
                 }
             }
         }
@@ -287,6 +315,7 @@ namespace EmiCB.Inputs
             void OnMove(InputAction.CallbackContext context);
             void OnToggleJournal(InputAction.CallbackContext context);
             void OnToggleChat(InputAction.CallbackContext context);
+            void OnExitInfoScreen(InputAction.CallbackContext context);
         }
     }
 }
