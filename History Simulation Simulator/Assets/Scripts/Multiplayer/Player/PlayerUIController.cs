@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Mirror;
 using TMPro;
 
@@ -10,9 +11,13 @@ public class PlayerUIController : NetworkBehaviour{
     [SerializeField] private GameObject infoScreen;
     [SerializeField] private GameObject journal;
     [SerializeField] private GameObject chat;
+    [SerializeField] private GameObject chatBox;
 
     [SerializeField] private bool isJournalOpen = false;
     [SerializeField] private bool isChatOpen = false;
+
+    private Color normal = new Color(0, 0, 0, 0.33f);
+    private Color invis = new Color(0, 0, 0, 0.0f);
 
     public override void OnStartAuthority() {
         canvas.SetActive(true);
@@ -53,6 +58,7 @@ public class PlayerUIController : NetworkBehaviour{
 
         if (isChatOpen) {
             chat.gameObject.SetActive(true);
+            chatBox.GetComponent<Image>().color = normal;
             if (isJournalOpen) return;
             // disable player movement & show & unlock cursor
             InputManager.Add(ActionMapNames.Player);
@@ -61,6 +67,7 @@ public class PlayerUIController : NetworkBehaviour{
             Cursor.lockState = CursorLockMode.None;
         }
         else {
+            chatBox.GetComponent<Image>().color = invis;
             chat.gameObject.SetActive(false);
             if (isJournalOpen) return;
             // enable player movement & hide & lock cursor to center of screen
