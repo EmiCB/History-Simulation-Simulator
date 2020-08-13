@@ -11,6 +11,7 @@ the absence of a classroom.
     * [Mirror Networking v16.10.3](https://mirror-networking.com/)
     * Cinemachine
     * TextMeshPro
+    * [Medieval Tavern Pack](https://assetstore.unity.com/packages/3d/props/furniture/medieval-tavern-pack-112546) for placeholder scene
 * Blender v2.83
 
 ## Features
