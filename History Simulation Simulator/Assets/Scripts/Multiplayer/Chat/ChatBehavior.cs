@@ -24,6 +24,7 @@ namespace EmiCB.Chat {
 
         // add message to chat
         private void HandleNewMessage(string message) {
+            chatText.GetComponent<RectTransform>().sizeDelta += new Vector2(0, 30);
             chatText.text += message;
         }
 

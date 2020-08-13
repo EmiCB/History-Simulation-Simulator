@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace EmiCB.Lobby.CharacterSelection {
     public class CharacterButton : MonoBehaviour {
-        public CharacterData characterData;
+        public CharacterData characterData = null;
 
         public void ChooseCharacter() {
             gameObject.GetComponentInParent<NetworkRoomPlayerLobby>().CmdSetCharacterData(characterData);
