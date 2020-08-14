@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f945127bbeb9c3449b8ac83f3a2150ea, type: 3}
+  m_Name: Alexander MacDougall
+  m_EditorClassIdentifier: 
+  characterName: Alexander MacDougall
+  title: Merchant and Leader of the Sons of Liberty, Patriot
+  biography: "You are a fire-breathing radical, a true believer in the patriot cause
+    who is willing to do anything to oppose the British.  You grew up in poverty
+    after arriving in New York City in 1738, but you made a huge fortune during the
+    French and Indian War\u2014you were a privateer, hijacking French ships and taking
+    all their loot (in wartime, that makes you a patriot not a pirate).  With that
+    money, you became a wealthy merchant. \r\nHowever, you were never fully accepted
+    by the New York social and political elite. You didn\u2019t have the right pedigree
+    and you have a bit of resentment for the Livingstons and Delanceys of the world. 
+    However, you found your calling with the Sons of Liberty, at the helm of the
+    mob.  In 1770, when the British repealed most (but not all!) of the taxes of
+    the Townshend Acts, you were furious when Delancey and some of the leading merchants
+    gave up the boycott.  You wrote a scathing letter (under the pseudonym of \u201CBrutus\u201D)
+    in which you called those merchants \u201Cmiscreants\u201D and \u201Caccursed
+    Villains\u201D who were seeking their own wealth wile contributing to the \u201Ccountry\u2019s
+    ruin.\u201D  You actually served time in jail for a different letter you wrote
+    (in your own name) calling out the political leadership of New York for not standing
+    up to the British, making you a \u201Cmartyr for liberty\u201D in the eyes of
+    many patriots. \r\nAlong with your buddy, Isaac Sears (also a character in the
+    simulation), you are now a leader of the Sons of Liberty. You view yourself as
+    a true friend of the people: ordinary laborers and seamen who often don\u2019t
+    meet the property requirements to vote or serve in public office.   You want
+    to help these common people take back control of the government, and you see
+    no problem in using mob violence to achieve that goal.  You are siding with the
+    Livingston faction, since Livingston is supporting the patriot cause. He\u2019ll
+    want to keep his hands clean and not get involved with the mob, but you can help
+    him by mobilizing the common people in the patriot cause.  \r\nAs such, your
+    character has two major tasks.  1) When you speak in the provincial assembly,
+    you should provide passionate defenses of liberty in the face of British oppression.
+    You are a true believer, and feel free to go really over the top as someone speaking
+    for the \u201Cpeople\u201D in opposition to the corrupt elite.  2) Lead the mob. 
+    You should try to enlist your patriot buddies (particularly those in the \u201Ccrowd\u201D)
+    to intimidate moderates and loyalists into voting with you.   \r"

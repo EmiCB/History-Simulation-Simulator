@@ -3178,6 +3178,8 @@ MonoBehaviour:
   characterDatas:
   - {fileID: 11400000, guid: 06b1eea8eea6b9b488a77d8eb16ae75c, type: 2}
   - {fileID: 11400000, guid: bea0ab400f1524e46a260b0209f3123c, type: 2}
+  - {fileID: 11400000, guid: e3e88ee44075bd74f9debbbc9a7ca558, type: 2}
+  characterButtons: []
 --- !u!114 &929743862
 MonoBehaviour:
   m_ObjectHideFlags: 0

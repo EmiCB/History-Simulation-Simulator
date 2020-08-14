@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+/*
 namespace EmiCB.Lobby {
     public class PlayerNumberInput : MonoBehaviour {
         [SerializeField] private NetworkManagerLobby networkManagerLobby = null;
@@ -50,4 +51,4 @@ namespace EmiCB.Lobby {
         }
     }
 }
-
+*/
