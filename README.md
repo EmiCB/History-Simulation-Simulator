@@ -1,8 +1,7 @@
 # History Simulation Simulator
 Submission for HackIllinois 2020. 
 
-This project is meant to be a simple game creator for educators. Specifically, it is targeted at history teachers who want to continue to run their simulations in
-the absence of a classroom. A favorite part of my high school history classes has always been doing simulations where each student is given a character to roleplay and debate as.
+This project is meant to be a simple game creator for educators. Specifically, it is targeted at history teachers who want to continue to run their simulations in the absence of a classroom. A favorite part of my high school history classes has always been doing simulations where each student is given a character to roleplay and debate as.
 
 [Download for Windows & Mac Here](https://emicb.itch.io/history-simulation-simulator) (I recommend getting the [itch.io desktop app](https://itch.io/app) since it acts as a launcher)
 
@@ -33,7 +32,7 @@ Just type "localhost" into the IP field!
 [Grab the local IP (IPv4) of the host computer](https://www.avast.com/c-how-to-find-ip-address) and put that into the client's IP fields!
 
 ### Clients on Different Networks?
-Check out [this guide on port forwarding](https://www.noip.com/support/knowledgebase/general-port-forwarding-guide/) and use the port 7777!
+Check out [this guide on port forwarding](https://www.noip.com/support/knowledgebase/general-port-forwarding-guide/) and use the port 7777! Then put your public IP address into the client's IP fields (you can find this by searching "What's my IP" on your browser).
 
 
 ## Final Version Planned / Possible Features
