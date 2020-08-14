@@ -1,7 +1,7 @@
 # History Simulation Simulator
 Submission for HackIllinois 2020. 
 
-This project is meant to be a simple game creator for educators. Specifically, it is targeted at history teachers who want to continue to run their simulations in the absence of a classroom. A favorite part of my high school history classes has always been doing simulations where each student is given a character to roleplay and debate as.
+This project is meant to be a simple game creator for educators. Specifically, it is targeted at history teachers who want to continue to run their simulations in the absence of a classroom. My favorite part of my high school history classes was when teachers would run simulations. We were all assigned characters and had to do research so that we could debate and vote on policies accurate to the time period. They were always a lot of fun and helped me learn a lot in a class where I usually struggled to remember things. However, these simulations are more difficult to conduct remotely and are less fun when you're not in the same room together, so I decided to make a virtual room with tools to help the teacher run the simulation more smoothly.
 
 [Download for Windows & Mac Here](https://emicb.itch.io/history-simulation-simulator) (I recommend getting the [itch.io desktop app](https://itch.io/app) since it acts as a launcher)
 
